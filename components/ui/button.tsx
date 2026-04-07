@@ -1,15 +1,13 @@
 
-import Link from "next/link"
 
-type ButtonProps = {
+
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
     className?: string;
-    href?: string;
     children: React.ReactNode;
-    props?: React.HTMLAttributes<HTMLAnchorElement>;
-}
-export const ButtonPrimary = ({className = '', href = '#', children, props}: ButtonProps) =>{
+};
+export const ButtonPrimary = ({className = '', children, ...props}: ButtonProps) =>{
     return(
-        <Link href={href} className={`
+        <button className={`
                 flex
                 justify-center
                 w-full max-w-[250px]
@@ -23,8 +21,9 @@ export const ButtonPrimary = ({className = '', href = '#', children, props}: But
                 mt-[1.5rem] max-md:mt-[1rem]
                 border-[2px] border-neutral-100 border-solid
                 transition-[background,color] duration-[.3s] linear
+                cursor-pointer
              ${className}`} {...props}>
             {children}
-        </Link>
+        </button>
     )
 }

@@ -7,9 +7,10 @@ import { TiDelete } from "react-icons/ti";
 import { IoMdMale, IoMdFemale } from "react-icons/io";
 import { FaQuestion } from "react-icons/fa6";
 import { usePlayerStore } from "@/store/usePlayers";
-
-export default function Home() {
+import { useGameStore } from "@/store/useGame";
+export default function ScreemCadastro() {
   const { setPlayer } = usePlayerStore();
+  const { setStatus } = useGameStore();
 
   type Player = {
     nome: string;
@@ -26,8 +27,11 @@ export default function Home() {
   useEffect(() => {
     if (players.length > 1) {
       setDisabledInit(true);
+    } else {
+      setDisabledInit(false);
     }
   }, [players]);
+
 
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-primary">
@@ -94,7 +98,10 @@ export default function Home() {
               setPlayerSexo("");
               setIsFormOpen(false);
             }}
-            className={`${!isFormOpen ? "invisible pointer-events-none opacity-0" : "visible pointer-events-all opacity-100"} p-[2.5rem] flex flex-col gap-[1.5rem] justify-center items-center absolute h-full w-full bg-black inset-0 z-[2] transition-opacity duration-200 linear`}
+            className={`${!isFormOpen
+              ? "pointer-events-none opacity-0 translate-y-10"
+              : "pointer-events-auto opacity-100 translate-y-0"
+              } p-[2.5rem] flex flex-col gap-[1.5rem] justify-center items-center absolute h-full w-full bg-black inset-0 z-[2] transition-all duration-200 ease-linear`}
           >
             <div className="flex flex-col gap-[.3rem] w-full">
               <label htmlFor="playerName" className="text-white">
@@ -154,7 +161,11 @@ export default function Home() {
 
           <button
             disabled={!disabledInit}
-            onClick={() => setPlayer(players)}
+            onClick={() => {
+                setPlayer(players)
+                setStatus("IN-GAME")
+              }
+            }
             className="text-black bg-white disabled:bg-white/20 p-[.2rem_2rem] rounded-[.5rem] cursor-pointer"
           >
             Iniciar

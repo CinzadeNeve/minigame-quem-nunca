@@ -13,6 +13,9 @@ export const useGameStore = create<Game>((set, get) => ({
             case "INICIO":
                 return {status: _status}
             break;
+            case "CADASTRO":
+                return {status: _status}
+            break;
             case "IN-GAME":
                 return {status: _status}
             break;
