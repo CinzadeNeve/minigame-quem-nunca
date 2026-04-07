@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "titulo": "Meu amigo parceiro!",
+        "descricao": "Escolha um(a) jogador(a) para tomar uma dose de bebida.",
+        "sexo": "Todos",
+        "min_n_jogadores": 3
+    },
+    {
+        "id": 2, 
+        "titulo": "Eu sou da Igreja!",
+        "descricao": "Todos tomam uma dose, menos você!",
+        "sexo": "Todos",
+        "min_n_jogadores": -1
+    },
+    {
+        "id": 3, 
+        "titulo": "Sai gay!",
+        "descricao": "Todos que já tiveram uma experiência homoafetiva bebem uma dose!",
+        "sexo": "Todos",
+        "min_n_jogadores": -1
+    },
+    {
+        "id": 4, 
+        "titulo": "Sinto de perto o cheiro de couro",
+        "descricao": "Todos que já tiveram uma experiência lésbica bebem uma dose!",
+        "sexo": "Todos",
+        "min_n_jogadores": -1
+    },
+    {
+        "id": 5, 
+        "titulo": "Os últimos da terra",
+        "descricao": "Todos que forem heterossexuais bebem uma dose!",
+        "sexo": "Todos",
+        "min_n_jogadores": -1
+    }
+]

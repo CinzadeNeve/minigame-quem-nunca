@@ -5,6 +5,7 @@ import ScreemCadastro from "@/app/_screens/ScreemCadastro";
 import ScreemInGame from "@/app/_screens/ScreemInGame";
 
 import { useGameStore } from "@/store/useGame";
+import ScreemDoacao from "./_screens/ScreemDoacao";
 
 export default function Home() {
   const {status} = useGameStore();
@@ -17,6 +18,8 @@ export default function Home() {
   }
   else if(status == "IN-GAME"){
     return(<ScreemInGame />)
+  }else if(status == "DOACAO"){
+    return(<ScreemDoacao />)
   }
 
   

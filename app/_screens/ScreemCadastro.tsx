@@ -9,11 +9,14 @@ import { FaQuestion } from "react-icons/fa6";
 import { usePlayerStore } from "@/store/usePlayers";
 import { useGameStore } from "@/store/useGame";
 import { Player } from "@/interface/player";
+
+import { IoReturnUpBackSharp } from "react-icons/io5";
+
 export default function ScreemCadastro() {
   const { setPlayer } = usePlayerStore();
   const { setStatus } = useGameStore();
 
- 
+
 
 
   const [players, setPlayers] = useState<Player[]>([]);
@@ -41,55 +44,59 @@ export default function ScreemCadastro() {
 
         {/** Usuários cadastrados */}
         <div className="flex-1 flex flex-col justify-center items-center relative px-[1rem] overflow-hidden">
-          
-          <div className="w-full h-fit overflow-y-auto">
-          
-          {players.length > 0 ? (
-            <ul className="flex flex-col gap-[.5rem] w-full">
-              {players.map((player, index) => (
-                <li
-                  key={index}
-                  className="flex justify-between items-center relative bg-neutral-100 text-white p-[.8rem] rounded-[.25rem] text-center"
-                >
-                  <div className="flex items-center gap-[.5rem]">
-                    {player.sexo == "Masculino" ? (
-                      <IoMdMale size={20} className="text-white" />
-                    ) : player.sexo == "Feminino" ? (
-                      <IoMdFemale size={20} className="text-white" />
-                    ) : (
-                      <FaQuestion size={20} className="text-white" />
-                    )}
-                  </div>
 
-                  {player.nome}
+          <button onClick={() => setStatus("INICIO")} className="cursor-pointer p-[.2rem_1.5rem] bg-neutral-100 absolute left-[1rem] top-[1rem] z-[999] rounded-[.25rem]">
+            <IoReturnUpBackSharp size={20} className="text-white" />
+          </button>
 
-                  <button
-                    onClick={() => {
-                      const novo = players.filter(
-                        (p) => p.nome !== player.nome,
-                      );
-                      setPlayers(novo);
-                    }}
-                    className="cursor-pointer hover:scale-[1.2] transition-transform duration-200 linear"
+          <div className="w-full overflow-y-auto">
+
+            {players.length > 0 ? (
+              <ul className="flex flex-col gap-[.5rem] w-full">
+                {players.map((player, index) => (
+                  <li
+                    key={index}
+                    className="flex justify-between items-center relative bg-neutral-100 text-white p-[.8rem] rounded-[.25rem] text-center"
                   >
-                    <TiDelete size={24} />
-                  </button>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p className="text-center text-gray-500">
-              Nenhum jogador cadastrado.
-            </p>
-          )}
-            
+                    <div className="flex items-center gap-[.5rem]">
+                      {player.sexo == "Masculino" ? (
+                        <IoMdMale size={20} className="text-white" />
+                      ) : player.sexo == "Feminino" ? (
+                        <IoMdFemale size={20} className="text-white" />
+                      ) : (
+                        <FaQuestion size={20} className="text-white" />
+                      )}
+                    </div>
+
+                    {player.nome}
+
+                    <button
+                      onClick={() => {
+                        const novo = players.filter(
+                          (p) => p.nome !== player.nome,
+                        );
+                        setPlayers(novo);
+                      }}
+                      className="cursor-pointer hover:scale-[1.2] transition-transform duration-200 linear"
+                    >
+                      <TiDelete size={24} />
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="text-center text-gray-500">
+                Nenhum jogador cadastrado.
+              </p>
+            )}
+
           </div>
 
           <form
             onSubmit={(e) => {
               e.preventDefault();
 
-              const novoPlayer:Player = {
+              const novoPlayer: Player = {
                 nome: playerName,
                 sexo: playerSexo,
                 avatar: null,
@@ -157,9 +164,10 @@ export default function ScreemCadastro() {
         </div>
 
         <div className="bg-black h-[120px] relative p-[.5rem] flex flex-col gap-[.5rem] justify-center items-center">
+
           <button
             onClick={() => setIsFormOpen(!isFormOpen)}
-            className="cursor-pointer h-[45px] w-[45px] flex flex-col justify-center items-center bg-white rounded-[50%] hover:scale-[1.1] focus-visible:scale-[1.1] transition-transform duration-[.3s]"
+            className="cursor-pointer absolute right-[2rem] h-[45px] w-[45px] flex flex-col justify-center items-center bg-white rounded-[50%] hover:scale-[1.1] focus-visible:scale-[1.1] transition-transform duration-[.3s]"
           >
             <FaUserPlus className="text-neutral-100" size={20} />
           </button>
@@ -167,12 +175,12 @@ export default function ScreemCadastro() {
           <button
             disabled={!disabledInit}
             onClick={() => {
-                if(players.length < 2) return;
-                setPlayer(players)
-                setStatus("IN-GAME")
-              }
+              if (players.length < 2) return;
+              setPlayer(players)
+              setStatus("IN-GAME")
             }
-            className="text-black bg-white disabled:bg-white/20 p-[.2rem_2rem] rounded-[.5rem] cursor-pointer disabled:cursor-auto"
+            }
+            className="text-black bg-white disabled:bg-white/20 p-[.2rem_2.5rem] rounded-[.5rem] cursor-pointer disabled:cursor-auto hover:scale-[1.1] focus-visible:scale-[1.1] transition-transform duration-200 linear"
           >
             Iniciar
           </button>

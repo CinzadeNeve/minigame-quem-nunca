@@ -64,7 +64,7 @@
         "pergunta": "Você já tentou evitar alguém com quem já se envolveu?",
         "sexo": "Todos"
     },
-     {
+    {
         "id": 14,
         "pergunta": "Você pegou uma mulher trans?",
         "sexo": "Masculino"
@@ -97,6 +97,116 @@
     {
         "id": 20,
         "pergunta": "Você pegou seu primo no sigilo?",
+        "sexo": "Feminino"
+    },
+    {
+        "id": 21,
+        "pergunta": "Você já se sentiu atrasado na vida adulta — com emprego, dinheiro ou estabilidade — enquanto cresce a pressão para ajudar em casa, a ponto de isso começar a afetar seu sono?",
+        "sexo": "Todos"
+    },
+    {
+        "id": 22,
+        "pergunta": "Você já usou aplicativo de relacionamento (Tinder, Grindr, etc...)?",
+        "sexo": "Todos"
+    },
+    {
+        "id": 23,
+        "pergunta": "Você já esteve na 'friendzone'?",
+        "sexo": "Todos"
+    },
+    {
+        "id": 24,
+        "pergunta": "Você já fingiu um orgasmo?",
+        "sexo": "Todos"
+    },
+    {
+        "id": 25,
+        "pergunta": "Você já fez sexo em público?",
+        "sexo": "Todos"
+    },
+    {
+        "id": 26,
+        "pergunta": "Você já se sentiu deslocadx sobre sux orientação sexual?",
+        "sexo": "Outros"
+    },
+    {
+        "id": 27,
+        "pergunta": "Você já gastou dinheiro no cabaré?",
+        "sexo": "Todos"
+    },
+    {
+        "id": 28,
+        "pergunta": "Você já fez sexo na água (piscina, mar, açude, barragem, etc...)",
+        "sexo": "Todos"
+    },
+    {
+        "id": 29,
+        "pergunta": "Você já fez sexo sob efeito de drogas?",
+        "sexo": "Todos"
+    },
+    {
+        "id": 30,
+        "pergunta": "Você já teve um relacionamento a distância?",
+        "sexo": "Todos"
+    },
+    {
+        "id": 31,
+        "pergunta": "Você já pegou alguém 10 anos mais novo que você?",
+        "sexo": "Todos"
+    },
+    {
+        "id": 32,
+        "pergunta": "Você já pegou alguém 10 anos mais velho que você?",
+        "sexo": "Todos"
+    },
+    {
+        "id": 33,
+        "pergunta": "Você já ficou pelado sob efeito de bebida alcoólica?",
+        "sexo": "Todos"
+    },
+    {
+        "id": 34,
+        "pergunta": "Você já transou sob efeito de álcool?",
+        "sexo": "Todos"
+    },
+    {
+        "id": 35,
+        "pergunta": "Você já mijou nas costas do seu amigo?",
+        "sexo": "Masculino"
+    },
+    {
+        "id": 36,
+        "pergunta": "Você já bateu siririca?",
+        "sexo": "Feminino"
+    },
+    {
+        "id": 37,
+        "pergunta": "Você já teve fetiche com algum político?",
+        "sexo": "Todos"
+    },
+    {
+        "id": 38,
+        "pergunta": "Você já levou pontos?",
+        "sexo": "Todos"
+    },
+    {
+        "id": 39,
+        "pergunta": "Você já teve uma experiência paranormal?",
+        "sexo": "Todos"
+    },
+    {
+        "id": 40,
+        "pergunta": "Você já pensou em se tornar alguém do Job?",
+        "sexo": "Todos"
+    },
+    {
+        "id": 41,
+        "pergunta": "Você já quis ser mulher?",
+        "sexo": "Masculino"
+    },
+    {
+        "id": 42,
+        "pergunta": "Você já quis ser homem?",
         "sexo": "Feminino"
     }
 ]

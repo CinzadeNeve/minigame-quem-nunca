@@ -22,6 +22,7 @@ export default function ScreemHome() {
       </p>
 
       <ButtonPrimary onClick={() => setStatus("CADASTRO")} >Iniciar Jogo</ButtonPrimary>
+      <ButtonPrimary onClick={() => setStatus("DOACAO")} className="!mt-[.5rem]" >Doação</ButtonPrimary>
     </div>
   );
 }
