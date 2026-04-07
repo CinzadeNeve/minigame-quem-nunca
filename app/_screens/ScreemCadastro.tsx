@@ -8,15 +8,13 @@ import { IoMdMale, IoMdFemale } from "react-icons/io";
 import { FaQuestion } from "react-icons/fa6";
 import { usePlayerStore } from "@/store/usePlayers";
 import { useGameStore } from "@/store/useGame";
+import { Player } from "@/interface/player";
 export default function ScreemCadastro() {
   const { setPlayer } = usePlayerStore();
   const { setStatus } = useGameStore();
 
-  type Player = {
-    nome: string;
-    sexo: string;
-    avatar: HTMLImageElement | null;
-  };
+ 
+
 
   const [players, setPlayers] = useState<Player[]>([]);
   const [isFormOpen, setIsFormOpen] = useState<boolean>(false);
@@ -35,14 +33,17 @@ export default function ScreemCadastro() {
 
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-primary">
-      <div className="max-w-[600px] min-h-[calc(100vh-2rem)] w-full flex flex-col gap-[.5rem]">
+      <div className="max-w-[600px] min-h-[calc(100vh-2rem)] h-[calc(100vh-2rem)] max-md:min-h-dvh max-md:h-dvh w-full flex flex-col gap-[.5rem]">
         <p className="bg-black p-[1.2rem] rounded-[.25rem] text-white text-center leading-[1.2] text-[18px] max-md:text-[14px]">
           Para damos inicio ao jogo, precisamos que cadastre os jogadores que
           irão participar.
         </p>
 
         {/** Usuários cadastrados */}
-        <div className="flex-1 flex flex-col justify-center items-center relative">
+        <div className="flex-1 flex flex-col justify-center items-center relative px-[1rem] overflow-hidden">
+          
+          <div className="w-full h-fit overflow-y-auto">
+          
           {players.length > 0 ? (
             <ul className="flex flex-col gap-[.5rem] w-full">
               {players.map((player, index) => (
@@ -81,15 +82,19 @@ export default function ScreemCadastro() {
               Nenhum jogador cadastrado.
             </p>
           )}
+            
+          </div>
 
           <form
             onSubmit={(e) => {
               e.preventDefault();
 
-              const novoPlayer = {
+              const novoPlayer:Player = {
                 nome: playerName,
                 sexo: playerSexo,
                 avatar: null,
+                n_sim: 0,
+                n_nao: 0,
               };
 
               setPlayers([...players, novoPlayer]);
@@ -162,11 +167,12 @@ export default function ScreemCadastro() {
           <button
             disabled={!disabledInit}
             onClick={() => {
+                if(players.length < 2) return;
                 setPlayer(players)
                 setStatus("IN-GAME")
               }
             }
-            className="text-black bg-white disabled:bg-white/20 p-[.2rem_2rem] rounded-[.5rem] cursor-pointer"
+            className="text-black bg-white disabled:bg-white/20 p-[.2rem_2rem] rounded-[.5rem] cursor-pointer disabled:cursor-auto"
           >
             Iniciar
           </button>
