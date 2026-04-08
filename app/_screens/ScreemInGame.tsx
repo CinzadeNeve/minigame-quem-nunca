@@ -196,6 +196,7 @@ const ScreemInGame = () => {
 
 
                     <Image
+                        loading="eager"
                         src={imgBaseCerveja}
                         alt="Imagem de uma caneca de cerveja"
                         className="absolute right-[1rem] bottom-[0rem] w-[120px]"
@@ -205,6 +206,7 @@ const ScreemInGame = () => {
                     {/** Caso em que todos os Jogadores chegaram a todas as perguntas */}
                     <div className={`${!isTotalPerguntas ? 'opacity-0 invisibled pointer-events-none' : 'opacity-100 visible pointer-events-auto'} transition-all duration-200 linear h-full w-full absolute inset-0 bg-[#F5E6BB] flex flex-col justify-center items-center z-[999] px-[1rem]`}>
                         <Image
+                            loading="eager"
                             src={imgChegouLa}
                             alt="Imagem Chegou lá"
                             className="w-full max-w-[160px] h-auto"

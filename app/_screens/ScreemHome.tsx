@@ -16,6 +16,7 @@ export default function ScreemHome() {
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-primary relative">
       <Image
+        loading="eager"
         src={imgBaseCerveja}
         alt="Imagem de uma caneca de cerveja"
         className="w-[300px] max-md:w-[200px]"

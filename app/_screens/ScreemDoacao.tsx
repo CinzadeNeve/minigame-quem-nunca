@@ -48,9 +48,9 @@ export default function ScreemDoacao() {
                         <IoReturnUpBackSharp size={20} className="text-white" />
                     </button>
 
-                    <Image src={imgUrsoMendigando} alt="Urso mendigando" className="max-w-[280px] w-full" />
+                    <Image loading="eager" src={imgUrsoMendigando} alt="Urso mendigando" className="max-w-[280px] w-full" />
                     <p className="text-center leading-[1.1] mt-[2rem]">Aceitamos doações de qualquer quantia para insentivar o programador a tomar café e não entrar no mundo da prostituição.</p>
-                    <Image src={imgPix} alt="Doação via Pix - José Cláudio Alves Sobrinho" className="max-w-[120px] w-full mt-[1rem]" />
+                    <Image loading="eager" src={imgPix} alt="Doação via Pix - José Cláudio Alves Sobrinho" className="max-w-[120px] w-full mt-[1rem]" />
                 </div>
 
                 <div className="bg-black h-[120px] relative p-[.5rem] flex flex-col gap-[.5rem] justify-center items-center">
