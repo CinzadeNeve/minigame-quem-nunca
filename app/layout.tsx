@@ -8,6 +8,9 @@ const carterOne = Carter_One({
   variable: '--font-carter-one',
 });
 
+const baseUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
 export const metadata: Metadata = {
   title: "MiniGame | Quem nunca?",
   description: "Quem Nunca” é um minigame divertido e revelador onde os jogadores confessam situações que já viveram… ou não. Prepare-se para risadas, histórias inesperadas e algumas verdades que talvez fosse melhor deixar escondidas.",
@@ -32,7 +35,7 @@ export const metadata: Metadata = {
     siteName: "MiniGame",
     images: [
       {
-        url: "./public/image/baseCerveja.jpg",
+        url: `${baseUrl}/image/baseCerveja.jpg`,
         width: 1200,
         height: 630,
         alt: "Jogo Quem Nunca",
@@ -47,7 +50,7 @@ export const metadata: Metadata = {
     title: "Quem Nunca? | Minigame divertido",
     description:
       "Descubra segredos e dê boas risadas com o jogo “Quem Nunca?”.",
-    images: ["./public/image/baseCerveja.jpg"],
+    images: [`${baseUrl}/image/baseCerveja.jpg`],
   },
 
   robots: {
