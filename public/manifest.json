@@ -1,7 +1,8 @@
 {
+  "id": "/app",
   "name": "MiniGame | Quem nunca",
   "description": "Quem Nunca” é um minigame divertido e revelador onde os jogadores confessam situações que já viveram… ou não. Prepare-se para risadas, histórias inesperadas e algumas verdades que talvez fosse melhor deixar escondidas.",
-  "short_name": "quem-nunca",
+  "short_name": "QuemNunca",
   "icons": [
     {
       "src": "/icons/icon-192x192.png",
