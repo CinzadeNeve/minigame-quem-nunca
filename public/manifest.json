@@ -3,7 +3,10 @@
   "name": "MiniGame | Quem nunca",
   "description": "Quem Nunca” é um minigame divertido e revelador onde os jogadores confessam situações que já viveram… ou não. Prepare-se para risadas, histórias inesperadas e algumas verdades que talvez fosse melhor deixar escondidas.",
   "short_name": "QuemNunca",
-  "categories": ["games", "entertainment"],
+  "categories": [
+    "games",
+    "entertainment"
+  ],
   "screenshots": [
     {
       "src": "/screenshots/screenshots-home.png",
@@ -37,5 +40,15 @@
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
   "lang": "pt-BR"
 }
