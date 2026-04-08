@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: "MiniGame",
     images: [
       {
-        url: "/image/baseCerveja.jpg",
+        url: "./image/baseCerveja.jpg",
         width: 1200,
         height: 630,
         alt: "Jogo Quem Nunca",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: "Quem Nunca? | Minigame divertido",
     description:
       "Descubra segredos e dê boas risadas com o jogo “Quem Nunca?”.",
-    images: ["/image/baseCerveja.jpg"],
+    images: ["./image/baseCerveja.jpg"],
   },
 
   robots: {
