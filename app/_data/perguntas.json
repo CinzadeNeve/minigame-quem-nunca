@@ -248,6 +248,16 @@
         "id": 50,
         "pergunta": "Você já riu de um meme de deficiente?",
         "sexo": "Todos"
+    },
+    {
+        "id": 51,
+        "pergunta": "Você já traiu alguém?",
+        "sexo": "Todos"
+    },
+    {
+        "id": 52,
+        "pergunta": "Você já disse que amava alguém, mas na real você só queria transar?",
+        "sexo": "Todos"
     }
 
 ]
