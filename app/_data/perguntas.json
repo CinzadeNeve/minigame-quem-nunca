@@ -127,7 +127,7 @@
     {
         "id": 26,
         "pergunta": "Você já se sentiu deslocadx sobre sux orientação sexual?",
-        "sexo": "Outros"
+        "sexo": "Outro"
     },
     {
         "id": 27,
@@ -208,5 +208,46 @@
         "id": 42,
         "pergunta": "Você já quis ser homem?",
         "sexo": "Feminino"
+    },
+    {
+        "id": 43,
+        "pergunta": "Você já foi preso",
+        "sexo": "Todos"
+    },
+    {
+        "id": 44,
+        "pergunta": "Você já quis fazer Ménage?",
+        "sexo": "Todos"
+    },
+    {
+        "id": 45,
+        "pergunta": "Você já sentiu tesão pelo seu professor?",
+        "sexo": "Feminino"
+    },
+    {
+        "id": 46,
+        "pergunta": "Você já sentiu tesão pela sua professora?",
+        "sexo": "Masculino"
+    },
+    {
+        "id": 47,
+        "pergunta": "Você beijaria alguém da roda?",
+        "sexo": "Todos"
+    },
+    {
+        "id": 48,
+        "pergunta": "Você já fumou cigarro?",
+        "sexo": "Todos"
+    },
+    {
+        "id": 49,
+        "pergunta": "Você já ficou bêbado com 2 copos ou menos de cerveja?",
+        "sexo": "Todos"
+    },
+    {
+        "id": 50,
+        "pergunta": "Você já riu de um meme de deficiente?",
+        "sexo": "Todos"
     }
+
 ]

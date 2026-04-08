@@ -71,11 +71,18 @@ const ScreemInGame = () => {
             index = Math.floor(Math.random() * perguntas.length);
             id = perguntas[index].id
 
-            if (perguntas[index].sexo == "Todos") {
+            if (perguntas[index].sexo === "Todos") {
                 isProgress = false;
-            } else if (perguntas[index].sexo == players?.[_index_vez]?.sexo && _index_vez != -1) {
+            } else if (
+                _index_vez !== -1 &&
+                perguntas[index].sexo === players?.[_index_vez]?.sexo
+            ) {
                 isProgress = false;
-            } else if (perguntas[index].sexo == "Outros" && _index_vez != -1) {
+            } else if (
+                _index_vez !== -1 &&
+                perguntas[index].sexo === "Outro" &&
+                players?.[_index_vez]?.sexo === "Outro"
+            ) {
                 isProgress = false;
             }
 
@@ -85,7 +92,7 @@ const ScreemInGame = () => {
                 setIsTotalPerguntas(true);
                 return;
             }
-        } while (vistos.includes(id) && isProgress)
+        } while (vistos.includes(id) || isProgress)
 
         setVistos([...vistos, id])
         return index;

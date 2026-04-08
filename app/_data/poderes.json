@@ -33,5 +33,12 @@
         "descricao": "Todos que forem heterossexuais bebem uma dose!",
         "sexo": "Todos",
         "min_n_jogadores": -1
+    },
+    {
+        "id": 6, 
+        "titulo": "Se você rir...",
+        "descricao": "Todos aqueles que já riram de meme de deficiente bebem uma dose!",
+        "sexo": "Todos",
+        "min_n_jogadores": -1
     }
 ]
