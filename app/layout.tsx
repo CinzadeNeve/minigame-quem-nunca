@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Carter_One } from 'next/font/google';
 import "./globals.css";
+import ServiceWorkerRegister from "@/components/ServiceWorkerRegister";
 
 const carterOne = Carter_One({
   subsets: ['latin'],
@@ -122,6 +123,7 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${carterOne.variable} h-full antialiased`}
     >
+      <ServiceWorkerRegister />
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
