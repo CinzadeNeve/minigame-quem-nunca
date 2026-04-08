@@ -4,6 +4,14 @@
   "description": "Quem Nunca” é um minigame divertido e revelador onde os jogadores confessam situações que já viveram… ou não. Prepare-se para risadas, histórias inesperadas e algumas verdades que talvez fosse melhor deixar escondidas.",
   "short_name": "QuemNunca",
   "categories": ["games", "entertainment"],
+  "screenshots": [
+    {
+      "src": "/screenshots/screenshots-home.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
   "icons": [
     {
       "src": "/icons/icon-192x192.png",
